@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 echo "=================================================="
-echo "      กำลังติดตั้ง theIGO Auto-Rejoin (V2)          "
+echo "   กำลังติดตั้ง Rejoin-The-iGO Auto-Rejoin (V2)    "
 echo "=================================================="
 
 # ขอสิทธิ์เข้าถึงพื้นที่จัดเก็บข้อมูล
@@ -12,9 +12,9 @@ sleep 2
 pkg update -y && pkg upgrade -y
 pkg install -y python curl tsu procps psmisc
 
-# ตั้งค่าชื่อบัญชีและชื่อโปรเจกต์บน GitHub
+# ตั้งค่าชื่อบัญชีและชื่อโปรเจกต์ให้ตรงกับ GitHub ของคุณเป๊ะๆ
 GH_USER="azcvyhnb-cpu"
-GH_REPO="Rejoin-The-IGO"
+GH_REPO="Rejoin-The-iGO"
 TARGET_DIR="/storage/emulated/0/Download"
 
 mkdir -p "$TARGET_DIR"
@@ -47,7 +47,7 @@ done
 chmod +x "$TARGET_DIR/rejoin.py"
 
 echo "=================================================="
-echo "[✓] ติดตั้ง theIGO เสร็จสมบูรณ์พร้อมใช้งาน!"
+echo "[✓] ติดตั้ง Rejoin-The-iGO เสร็จสมบูรณ์พร้อมใช้งาน!"
 echo "คัดลอกคำสั่งด้านล่างนี้ไปรันได้เลย:"
 echo 'su -c "export PATH=$PATH:/data/data/com.termux/files/usr/bin && export TERM=xterm-256color && cd /storage/emulated/0/Download && python ./rejoin.py"'
 echo "=================================================="
